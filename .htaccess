@@ -1,0 +1,27 @@
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^services/?$ services.php [L]
+RewriteRule ^method/?$ method.php [L]
+RewriteRule ^industries/?$ industries.php [L]
+RewriteRule ^about/?$ about.php [L]
+RewriteRule ^resources/?$ resources.php [L]
+RewriteRule ^contact/?$ contact.php [L]
+RewriteRule ^machine-shops-prepare-iso9001/?$ machine-shops-prepare-iso9001.php [L]
+RewriteRule ^registrar-auditor-expectations/?$ registrar-auditor-expectations.php [L]
+RewriteRule ^how-long-iso-certification-takes/?$ how-long-iso-certification-takes.php [L]
+RewriteRule ^iso-gap-assessment/?$ iso-gap-assessment.php [L]
+RewriteRule ^iso-9001-timeline-manufacturers/?$ iso-9001-timeline-manufacturers.php [L]
+RewriteRule ^iso-certification-cost-breakdown/?$ iso-certification-cost-breakdown.php [L]
+RewriteRule ^what-auditors-actually-look-for/?$ what-auditors-actually-look-for.php [L]
+RewriteRule ^iso-certification-red-flags/?$ iso-certification-red-flags.php [L]
+RewriteRule ^iso-9001-consulting/?$ iso-9001-consulting.php [L]
+RewriteRule ^iso-gap-assessment-services/?$ iso-gap-assessment-services.php [L]
+RewriteRule ^iso-audit-preparation/?$ iso-audit-preparation.php [L]
+RewriteRule ^iso-certification-timeline/?$ iso-certification-timeline.php [L]
+RewriteRule ^iso-consulting-indiana/?$ iso-consulting-indiana.php [L]
+RewriteRule ^iso-consulting-kentucky/?$ iso-consulting-kentucky.php [L]
+</IfModule>

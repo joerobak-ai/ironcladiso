@@ -1,0 +1,37 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . '/public_html/vendor/autoload.php';
+
+/*
+PLACE THIS FILE OUTSIDE public_html
+
+Example structure:
+
+/home/username/
+    config.php
+    /public_html
+        contact_handler.php
+*/
+
+function getMailer(){
+
+    $mail = new PHPMailer(true);
+
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.hostinger.com';
+    $mail->SMTPAuth   = true;
+
+    $mail->Username   = 'joe@ironcladiso.com';
+    $mail->Password   = 'YOUR_EMAIL_PASSWORD';
+
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
+
+    $mail->setFrom('joe@ironcladiso.com', 'IronClad ISO');
+
+    $mail->isHTML(true);
+
+    return $mail;
+}
